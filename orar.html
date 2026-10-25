@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расписание ICE261fr по неделям</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 950px; 
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        h2 {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .week-block {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .week-title {
+            background-color: #34495e;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 0;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 20px 10px; /* Увеличенное пространство */
+            text-align: center;
+        }
+        
+        /* --- РАЗДЕЛЕНИЕ ДНЕЙ --- */
+        td.day-end {
+            border-bottom: 4px double #95a5a6; 
+        }
+        thead tr {
+            border-bottom: 2px solid #34495e;
+        }
+
+        th {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            font-weight: 600;
+            padding: 12px 10px;
+        }
+
+        .quick-links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.quick-card{
+    text-decoration:none;
+    color:#2c3e50;
+    background:white;
+    padding:18px;
+    border-radius:10px;
+    font-weight:600;
+    text-align:center;
+    transition:.2s;
+    border-left:5px solid #34495e;
+}
+
+.quick-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,.12);
+}
+
+.moodle{
+    background:#fff8e6;
+    border-color:#f39c12;
+}
+
+.info{
+    background:#e8f4fd;
+    border-color:#3498db;
+}
+
+.integrity{
+    background:#f4ecf7;
+    border-color:#9b59b6;
+}
+
+.program{
+    background:#e9f7ef;
+    border-color:#2ecc71;
+}
+
+        
+        /* Цвета для дисциплин */
+        .bg-algebra { background-color: #e8f4f8; border-left: 4px solid #3498db; }
+        .bg-micro { background-color: #fdf2e9; border-left: 4px solid #e67e22; }
+        .bg-prog { background-color: #e9f7ef; border-left: 4px solid #2ecc71; }
+        .bg-comm { background-color: #f4ecf7; border-left: 4px solid #9b59b6; }
+        
+        .discipline { font-weight: bold; display: block; margin-bottom: 6px; }
+        
+        .date-col { font-weight: bold; background-color: #f8f9f9; width: 90px; }
+        .time-col { font-weight: bold; color: #2980b9; width: 120px; }
+
+        @media print {
+            body { background: #fff; padding: 0; }
+            .container { max-width: 100%; }
+            .week-block { box-shadow: none; page-break-inside: avoid; margin-bottom: 25px; padding: 0;}
+            .week-title { -webkit-print-color-adjust: exact; background-color: #34495e !important; color: white !important;}
+            th { -webkit-print-color-adjust: exact; background-color: #ecf0f1 !important; }
+            .bg-algebra, .bg-micro, .bg-prog, .bg-comm, .date-col {
+                -webkit-print-color-adjust: exact;
+            }
+            td { padding: 15px 10px; } 
+            td.day-end { border-bottom: 4px double #95a5a6 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ORARUL</h1>
+    <h2>Grupa ICE261fr | Semestrul I | Anul universitar 2026–2027</h2>
+
+    <!-- БЫСТРЫЕ ССЫЛКИ -->
+
+<div class="week-block">
+    <h3 class="week-title">🚀 Acces Rapid</h3>
+
+    <div class="quick-links">
+        <a class="quick-card moodle"
+           href="https://moodle.ase.md/"
+           target="_blank">
+            📚 Moodle ASEM
+        </a>
+        
+    
+        <a class="quick-card info"
+           href="https://moodle.ase.md/course/view.php?id=4568"
+           target="_blank">
+            💻 Informatica Economică
+        </a>
+
+        <a class="quick-card integrity"
+           href="https://moodle.ase.md/course/view.php?id=4912"
+           target="_blank">
+            🎓 Integritatea Academică
+        </a>
+
+        <a class="quick-card program"
+           href="https://moodle.ase.md/course/view.php?id=4964"
+           target="_blank">
+            👨‍💻 Programarea Calculatoarelor
+        </a>
+
+    </div>
+</div>
+
+    <!-- НЕДЕЛЯ 1 -->
+    <div class="week-block">
+        <h3 class="week-title">Неделя 1 (25.10 – 30.10)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>День</th>
+                    <th>Ora</th>
+                    <th>Disciplina</th>
+                    <th>Tipul</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 25.10 -->
+                <tr>
+                    <td class="date-col day-end">25.10</td>
+                    <td class="day-end">Duminică</td>
+                    <td class="time-col day-end">15:10–18:20</td>
+                    <td class="bg-algebra day-end"><span class="discipline">Algebra liniară</span></td>
+                    <td class="day-end">Seminar</td>
+                </tr>
+                <!-- 26.10 -->
+                <tr>
+                    <td class="date-col" rowspan="2">26.10</td>
+                    <td rowspan="2">Luni</td>
+                    <td class="time-col">16:20–19:30</td>
+                    <td class="bg-micro"><span class="discipline">Microeconomie</span></td>
+                    <td>Curs</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">19:40–21:10</td>
+                    <td class="bg-prog day-end"><span class="discipline">Programarea calculatoarelor</span></td>
+                    <td class="day-end">Lab</td>
+                </tr>
+                <!-- 27.10 ИСПРАВЛЕНО -->
+                <tr>
+                    <td class="date-col day-end">27.10</td>
+                    <td class="day-end">Marți</td>
+                    <td class="time-col day-end">16:20–21:10</td>
+                    <td class="bg-micro day-end"><span class="discipline">Microeconomie</span></td>
+                    <td class="day-end">Curs + Seminar</td>
+                </tr>
+                <!-- 28.10 -->
+                <tr>
+                    <td class="date-col day-end">28.10</td>
+                    <td class="day-end">Miercuri</td>
+                    <td class="time-col day-end">16:20–21:10</td>
+                    <td class="bg-micro day-end"><span class="discipline">Microeconomie</span></td>
+                    <td class="day-end">Curs + Seminar</td>
+                </tr>
+                <!-- 29.10 -->
+                <tr>
+                    <td class="date-col" rowspan="3">29.10</td>
+                    <td rowspan="3">Joi</td>
+                    <td class="time-col">14:40–16:10</td>
+                    <td class="bg-algebra"><span class="discipline">Algebra liniară</span></td>
+                    <td>Seminar</td>
+                </tr>
+                <tr>
+                    <td class="time-col">16:20–17:50</td>
+                    <td class="bg-prog"><span class="discipline">Programarea calculatoarelor</span></td>
+                    <td>Curs</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">18:00–21:10</td>
+                    <td class="bg-micro day-end"><span class="discipline">Microeconomie</span></td>
+                    <td class="day-end">Curs</td>
+                </tr>
+                <!-- 30.10 -->
+                <tr>
+                    <td class="date-col day-end">30.10</td>
+                    <td class="day-end">Vineri</td>
+                    <td class="time-col day-end">16:20–21:10</td>
+                    <td class="bg-micro day-end"><span class="discipline">Microeconomie</span></td>
+                    <td class="day-end">Curs + Seminar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- НЕДЕЛЯ 2 -->
+    <div class="week-block">
+        <h3 class="week-title">Неделя 2 (01.11 – 07.11)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>День</th>
+                    <th>Ora</th>
+                    <th>Disciplina</th>
+                    <th>Tipul</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 01.11 -->
+                <tr>
+                    <td class="date-col" rowspan="2">01.11</td>
+                    <td rowspan="2">Duminică</td>
+                    <td class="time-col">11:20–15:00</td>
+                    <td class="bg-comm"><span class="discipline">Comunicare și etică profesională</span></td>
+                    <td>Curs</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">15:10–18:20</td>
+                    <td class="bg-algebra day-end"><span class="discipline">Algebra liniară</span></td>
+                    <td class="day-end">Seminar</td>
+                </tr>
+                <!-- 02.11 -->
+                <tr>
+                    <td class="date-col" rowspan="2">02.11</td>
+                    <td rowspan="2">Luni</td>
+                    <td class="time-col">14:40–17:50</td>
+                    <td class="bg-micro"><span class="discipline">Microeconomie</span></td>
+                    <td>Seminar</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">18:00–21:10</td>
+                    <td class="bg-prog day-end"><span class="discipline">Programarea calculatoarelor</span></td>
+                    <td class="day-end">Curs</td>
+                </tr>
+                <!-- 03.11 -->
+                <tr>
+                    <td class="date-col" rowspan="2">03.11</td>
+                    <td rowspan="2">Marți</td>
+                    <td class="time-col">14:40–16:10</td>
+                    <td class="bg-algebra"><span class="discipline">Algebra liniară</span></td>
+                    <td>Seminar</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">18:00–21:10</td>
+                    <td class="bg-comm day-end"><span class="discipline">Comunicare și etică profesională</span></td>
+                    <td class="day-end">Curs + Seminar</td>
+                </tr>
+                <!-- 04.11 -->
+                <tr>
+                    <td class="date-col" rowspan="2">04.11</td>
+                    <td rowspan="2">Miercuri</td>
+                    <td class="time-col">14:40–17:50</td>
+                    <td class="bg-comm"><span class="discipline">Comunicare și etică profesională</span></td>
+                    <td>Curs + Seminar</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">18:00–21:10</td>
+                    <td class="bg-prog day-end"><span class="discipline">Programarea calculatoarelor</span></td>
+                    <td class="day-end">Lab</td>
+                </tr>
+                <!-- 05.11 -->
+                <tr>
+                    <td class="date-col" rowspan="2">05.11</td>
+                    <td rowspan="2">Joi</td>
+                    <td class="time-col">14:40–17:50</td>
+                    <td class="bg-prog"><span class="discipline">Programarea calculatoarelor</span></td>
+                    <td>Curs</td>
+                </tr>
+                <tr>
+                    <td class="time-col day-end">18:00–21:10</td>
+                    <td class="bg-comm day-end"><span class="discipline">Comunicare și etică profesională</span></td>
+                    <td class="day-end">Curs + Seminar</td>
+                </tr>
+                <!-- 06.11 -->
+                <tr>
+                    <td class="date-col day-end">06.11</td>
+                    <td class="day-end">Vineri</td>
+                    <td class="time-col day-end">14:40–19:30</td>
+                    <td class="bg-prog day-end"><span class="discipline">Programarea calculatoarelor</span></td>
+                    <td class="day-end">Lab</td>
+                </tr>
+                <!-- 07.11 -->
+                <tr>
+                    <td class="date-col day-end">07.11</td>
+                    <td class="day-end">Sâmbătă</td>
+                    <td class="time-col day-end">13:30–15:00</td>
+                    <td class="bg-comm day-end"><span class="discipline">Comunicare și etică profesională</span></td>
+                    <td class="day-end">Seminar</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- НЕДЕЛЯ 3 -->
+    <div class="week-block">
+        <h3 class="week-title">Неделя 3 (08.11)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>День</th>
+                    <th>Ora</th>
+                    <th>Disciplina</th>
+                    <th>Tipul</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 08.11 -->
+                <tr>
+                    <td class="date-col day-end">08.11</td>
+                    <td class="day-end">Duminică</td>
+                    <td class="time-col day-end">15:10–18:20</td>
+                    <td class="bg-algebra day-end"><span class="discipline">Algebra liniară</span></td>
+                    <td class="day-end">Curs</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
